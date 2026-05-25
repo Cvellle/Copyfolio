@@ -45,29 +45,45 @@
       /* GRID */
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-template-columns: 1fr;
         width: 100%;
       }
 
-      /* ITEM */
+      /* TABLET */
+      @media (min-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* DESKTOP → TAČNO 3 */
+      @media (min-width: 1024px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* ITEM = KVADRAT */
       .item {
         position: relative;
-        height: 220px;
+        aspect-ratio: 1 / 1;
         overflow: hidden;
       }
 
       /* LINK */
       .item a {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
         text-decoration: none;
         color: white;
+        text-align: center;
         padding: 20px;
       }
 
-      /* GLASS EFFECT */
+      /* GLASS */
       .bg {
         position: absolute;
         inset: 0;
@@ -113,7 +129,7 @@
           target="_blank"
         >
           <div class="bg"></div>
-          <div class="title">Kampanja 01</div>
+          <div class="title">Kocka Cola</div>
         </a>
       </div>
 
@@ -123,7 +139,7 @@
           target="_blank"
         >
           <div class="bg"></div>
-          <div class="title">Kampanja 02</div>
+          <div class="title">MTS duša</div>
         </a>
       </div>
 
@@ -133,7 +149,7 @@
           target="_blank"
         >
           <div class="bg"></div>
-          <div class="title">Strategija</div>
+          <div class="title">Šuma Piva</div>
         </a>
       </div>
 
@@ -143,7 +159,7 @@
           target="_blank"
         >
           <div class="bg"></div>
-          <div class="title">Storytelling</div>
+          <div class="title">Okafi se</div>
         </a>
       </div>
 
@@ -153,28 +169,28 @@
           target="_blank"
         >
           <div class="bg"></div>
-          <div class="title">Prezentacija</div>
+          <div class="title">Adam - Fotku ti dam!</div>
         </a>
       </div>
 
       <div class="item">
         <a href="https://meritus.rs" target="_blank">
           <div class="bg"></div>
-          <div class="title">Meritus</div>
+          <div class="title">Meritus sajt</div>
         </a>
       </div>
 
       <div class="item">
         <a href="https://codepen.io/Cvele/full/aKoJqP" target="_blank">
           <div class="bg"></div>
-          <div class="title">Interaktivni koncept</div>
+          <div class="title">Njuzletter</div>
         </a>
       </div>
 
       <div class="item">
         <a href="https://www.instagram.com/meritus_arch/" target="_blank">
           <div class="bg"></div>
-          <div class="title">Social media</div>
+          <div class="title">Meritus Insta</div>
         </a>
       </div>
 
